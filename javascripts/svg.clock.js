@@ -28,19 +28,11 @@ SVG.Clock = function(size, options) {
 
 
   /* pomodoro1 */
-  for (i = 149; i >= 0; i--)
-    this.rect(1, 4).move(50, 0).fill(red).rotate(i * 1, 50, 50)
-
-  /* pomodoro2 */
-  for (i = 329; i >= 180; i--)
+  for (i = 299; i >= 0; i--)
     this.rect(1, 4).move(50, 0).fill(red).rotate(i * 1, 50, 50)
 
   /* break1 */
-  for (i = 359; i >= 330; i--)
-    this.rect(1, 4).move(50, 0).fill(green).rotate(i * 1, 50, 50)
-
-  /* break2 */
-  for (i = 179; i >= 150; i--)
+  for (i = 359; i >= 300; i--)
     this.rect(1, 4).move(50, 0).fill(green).rotate(i * 1, 50, 50)
 
 
@@ -68,7 +60,7 @@ SVG.extend(SVG.Clock, {
     this.date = date;
     this.drawMinutesPointer();
     var minutes = this.date.getMinutes();
-    (minutes >= 25 && minutes <= 29) || (minutes >= 55 && minutes <= 59) ? this.drawbreakLabels() : this.drawfocusLabels();
+    (minutes >= 50 && minutes <= 59) ? this.drawbreakLabels() : this.drawfocusLabels();
   },
 
   drawMinutesPointer: function() {
@@ -97,12 +89,8 @@ SVG.extend(SVG.Clock, {
 
   minutesLeft: function() {
     var minutes = this.date.getMinutes();
-    if (minutes < 25)
-      return 24 - minutes;
-    else if (minutes < 30)
-      return 29 - minutes;
-    else if (minutes < 55)
-      return 54 - minutes;
+    if (minutes < 50)
+      return 49 - minutes;
     else
       return 59 - minutes;
   },

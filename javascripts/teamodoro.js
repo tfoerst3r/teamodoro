@@ -7,7 +7,7 @@ Teamodoro = {
     this.clock = SVG("canvas").clock("100%");
     this.updateClock();
     setInterval(this.updateClock.bind(this), 500);
-    setInterval(this.displayRandomGif.bind(this), 30 * 1000);
+    setInterval(this.displayRandomGif.bind(this), 50 * 1000);
 
     if (this.inBreak())
       this.displayRandomGif();
@@ -63,7 +63,7 @@ Teamodoro = {
 
   inBreak: function() {
     var minutes = this.getDate().getMinutes();
-    return (minutes >= 25 && minutes <= 29) || (minutes >= 55 && minutes <= 59);
+    return (minutes >= 50 && minutes <= 59);
   },
 
   beepOnStateChange: function() {
