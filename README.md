@@ -1,5 +1,5 @@
 ## Teamodoro
-Teamodoro is a simple pomodoro timer for teams. It helps improving the productivity of your team and reducing interruptions: https://teamodoro.com.
+Teamodoro is a simple pomodoro timer for teams. It helps improving the productivity of your team and reducing interruptions: https://tfoerst3r.github.io/teamodoro/.
 
 ![Teamodoro screenshot](/images/teamodoro_screenshot.jpg)
 
